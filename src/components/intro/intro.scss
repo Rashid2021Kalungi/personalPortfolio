@@ -1,3 +1,69 @@
-.intro{
-    background-color: lightpink;
+@import "../../global.scss";
+.intro {
+  background-color: white;
+  display: flex;
+
+  .left {
+    flex: 0.5;
+
+    .imgContainer {
+      overflow: hidden;
+      width: 800px;
+      height: 800px;
+      background-color: rgb(203, 232, 242);
+      border-radius: 50%;
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      //   float: top;
+
+      img {
+        width: 90%;
+        object-fit: fill;
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    position: relative;
+    overflow: hidden;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      h3 {
+        font-size: 30px;
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 100px;
+      left: 20%;
+
+      .icon {
+        width: 60px;
+        height: 50px;
+        display: flex;
+        animation: arrowBlink 2s infinite;
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }
