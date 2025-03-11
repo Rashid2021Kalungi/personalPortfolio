@@ -18,7 +18,7 @@
       //   float: top;
 
       img {
-        width: 90%;
+        width: 95%;
         object-fit: fill;
       }
     }
@@ -45,6 +45,37 @@
       }
       h3 {
         font-size: 30px;
+
+        span {
+          font-size: inherit;
+          color: rgb(4, 150, 199);
+        }
+        .ityped-cursor {
+          font-size: 2.2rem;
+          opacity: 1;
+          -webkit-animation: blink 0.3s infinite;
+          -moz-animation: blink 0.3s infinite;
+          animation: blink 0.3s infinite;
+          animation-direction: alternate;
+        }
+
+        @keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-webkit-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-moz-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
       }
     }
     a {
