@@ -3,6 +3,11 @@
   background-color: white;
   display: flex;
 
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+
   .left {
     flex: 0.5;
 
@@ -16,6 +21,10 @@
       // align-items: center;
       justify-content: center;
       //   float: top;
+      @include mobile{
+        width: 90%;
+        height: 80%;
+      }
 
       img {
         width: 95%;
@@ -25,6 +34,7 @@
   }
   .right {
     flex: 0.5;
+    bottom: 100px;
     position: relative;
     overflow: hidden;
 
@@ -39,6 +49,10 @@
       h1 {
         font-size: 60px;
         margin: 10px 0;
+
+        @include mobile{
+          font-size: 40px;
+        }
       }
       h2 {
         font-size: 40px;
@@ -82,6 +96,9 @@
       position: absolute;
       bottom: 100px;
       left: 20%;
+      @include mobile{
+        bottom: -15px;
+      }
 
       .icon {
         width: 60px;

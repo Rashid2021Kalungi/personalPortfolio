@@ -7,6 +7,9 @@
 
   h1 {
     font-size: 50px;
+    @include mobile {
+      font-size: 30px;
+    }
   }
   ul {
     margin: 10px;
@@ -14,7 +17,7 @@
     list-style: none;
     display: flex;
   }
-  
+
   .container {
     width: 80%;
     display: flex;
@@ -35,12 +38,15 @@
       position: relative;
       transition: all 2s ease;
       cursor: pointer;
+      @include mobile {
+        height: 100px;
+      }
 
       h3 {
         position: absolute;
         font-size: 20px;
-        z-index: 2; 
-        opacity: 0; 
+        z-index: 2;
+        opacity: 0;
         text-align: center;
         transition: opacity 0.3s ease;
       }
